@@ -118,7 +118,9 @@ type DrotmParams struct {
 	H    [4]float64 // Column-major 2 by 2 matrix.
 }
 
-// Type Order is used to specify the matrix storage format.
+// Type Order is used to specify the matrix storage format. An implementation
+// may not implement both orders and must panic if a routine is called using
+// an unimplemented order.
 type Order int
 
 const (
