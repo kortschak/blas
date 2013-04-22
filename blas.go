@@ -5,7 +5,7 @@
 /*
 Package blas provides interfaces for the BLAS linear algebra standard.
 
-All methods perform appropriate parameter checking and may panic if
+All methods must perform appropriate parameter checking and panic if
 provided parameters that do not conform to the requirements specified
 by the BLAS standard.
 
