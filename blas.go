@@ -256,8 +256,8 @@ type Float64 interface {
 // Complex64 implements the single precision complex BLAS routines.
 type Complex64 interface {
 	// Level 1 routines
-	Cdotu(n int, x []complex64, incX int, y []complex64, incY int, dotu []complex64)
-	Cdotc(n int, x []complex64, incX int, y []complex64, incY int, dotc []complex64)
+	Cdotu(n int, x []complex64, incX int, y []complex64, incY int) (dotu complex64)
+	Cdotc(n int, x []complex64, incX int, y []complex64, incY int) (dotc complex64)
 	Scnrm2(n int, x []complex64, incX int) float32
 	Scasum(n int, x []complex64, incX int) float32
 	Icamax(n int, x []complex64, incX int) int
@@ -301,8 +301,8 @@ type Complex64 interface {
 // Complex128 implements the double precision complex BLAS routines.
 type Complex128 interface {
 	// Level 1 routines.
-	Zdotu(n int, x []complex128, incX int, y []complex128, incY int, dotu []complex128)
-	Zdotc(n int, x []complex128, incX int, y []complex128, incY int, dotc []complex128)
+	Zdotu(n int, x []complex128, incX int, y []complex128, incY int) (dotu complex128)
+	Zdotc(n int, x []complex128, incX int, y []complex128, incY int) (dotc complex128)
 	Dznrm2(n int, x []complex128, incX int) float64
 	Dzasum(n int, x []complex128, incX int) float64
 	Izamax(n int, x []complex128, incX int) int
